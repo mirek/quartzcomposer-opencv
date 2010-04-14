@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.${PRODUCT_NAME:identifier}</string>
+	<string>com.quartzcomposer.${PRODUCT_NAME:identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -15,15 +15,17 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>OpenCV version 1.0, Copyright YourCompany.</string>
+	<string>OpenCV 2.1 for Quartz ComposeR</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>2.1</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>2.1.100414</string>
 	<key>QCPlugInClasses</key>
 	<array>
-		<string>OpenCVPlugIn</string>
 		<string>QCCVCanny</string>
+		<string>QCCVDilate</string>
+		<string>QCCVErode</string>
+		<string>QCCVLaplace</string>
 	</array>
 </dict>
 </plist>

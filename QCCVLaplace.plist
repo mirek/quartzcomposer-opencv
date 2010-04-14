@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>OpenCV Laplace Filter</string>
+	<key>description</key>
+	<string>Calculate the Laplacian of an image</string>
+	<key>copyright</key>
+	<string>(c) 2010 QuartzComposer.com, Mirek Rusin &lt;mirek@me.com&gt;, released under a BSD license, free for both academic and commercial use</string>
+	<key>attributes</key>
+	<dict>
+		<key>inputImage</key>
+		<dict>
+			<key>QCPortAttributeNameKey</key>
+			<string>Image</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>Input image</string>
+		</dict>
+		<key>inputApertureSizeIndex</key>
+		<dict>
+			<key>QCPortAttributeMenuItemsKey</key>
+			<array>
+				<string>3</string>
+				<string>5</string>
+				<string>7</string>
+			</array>
+			<key>QCPortAttributeNameKey</key>
+			<string>Aperture size</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>Aperture parameter for the Sobel operator</string>
+			<key>QCPortAttributeDefaultKey</key>
+			<integer>0</integer>
+			<key>QCPortAttributeMinimumValueKey</key>
+			<integer>0</integer>
+			<key>QCPortAttributeMaximumValueKey</key>
+			<integer>2</integer>
+		</dict>
+		<key>outputImage</key>
+		<dict>
+			<key>QCPortAttributeNameKey</key>
+			<string>Image</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>Output image</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

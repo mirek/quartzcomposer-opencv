@@ -1,10 +1,6 @@
-//
-//  CVAbstractImageProcessingPlugIn.m
-//  VisualObjectTracker
-//
-//  Created by Mirek Rusin on 19/02/2010.
-//  Copyright 2010 Inteliv Ltd. All rights reserved.
-//
+// TODO:
+// * change ifDifferent... to ignore format. Only the size, to implement...
+// * forcing format of the output image (needed for laplace which requires output to be 16 or 32 bits)
 
 #import "QCCVAbstractInputImageProcessingPlugIn.h"
 
@@ -21,11 +17,11 @@
 	return kQCPlugInTimeModeNone;
 }
 
-- (QCCVAbstractInputImageProcessingPlugIn *) init {
+- (id) init {
   return [self initWithPixelFormat: QCPlugInPixelFormatBGRA8 lockBufferRepresentation: YES];
 }
 
-- (QCCVAbstractInputImageProcessingPlugIn *) initWithPixelFormat: (NSString *) pixelFormat_ lockBufferRepresentation: (BOOL) lockBufferRepresentation_ {
+- (id) initWithPixelFormat: (NSString *) pixelFormat_ lockBufferRepresentation: (BOOL) lockBufferRepresentation_ {
   if (self = [super init]) {
     pixelFormat = pixelFormat_;
     lockBufferRepresentation = lockBufferRepresentation_;
@@ -36,23 +32,39 @@
 
 - (BOOL) ifDifferentUpdateInputIplImageWithInputImage: (id<QCPlugInInputImageSource>) image {
   BOOL didChange = NO;
-  if (![QCCVPlugIn isIplImage: inputIplImage sameAsInputImageSource: image]) {
+  if (![QCCVPlugIn isIplImage: inputIplImage sameSizeAndFormatAsInputImageSource: image]) {
     if (inputIplImage != NULL)
       cvReleaseImageHeader(&inputIplImage);
     inputIplImage = [QCCVPlugIn createIplImageHeaderWithInputImageSource: image];
+    
+    // Recreate image intensity if we're using it as well
+    if (useImageIntensity) {
+      if (inputIplImageIntensity != NULL)
+        cvReleaseImage(&inputIplImageIntensity);
+      inputIplImageIntensity = cvCreateImage(cvSize(inputIplImage->width, inputIplImage->height), 8, 1);
+    }
+    
     didChange = YES;
   }
-  if (inputIplImage) 
+  if (inputIplImage)
     inputIplImage->imageData = (char *)[image bufferBaseAddress];
   return didChange;
 }
 
 - (BOOL) ifDifferentUpdateOutputIplImageWithCloneOfInputImage: (id<QCPlugInInputImageSource>) image {
   BOOL didChange = NO;
-  if (![QCCVPlugIn isIplImage: outputIplImage sameAsInputImageSource: image]) {
+  if (![QCCVPlugIn isIplImage: outputIplImage sameSizeAndFormatAsInputImageSource: image]) {
     if (outputIplImage != NULL)
       cvReleaseImage(&outputIplImage);
     outputIplImage = [QCCVPlugIn cloneIplImageWithInputImageSource: image];
+    
+    // Recreate output for image intensity if we're using it
+    if (useImageIntensity) {
+      if (outputIplImageIntensity != NULL)
+        cvReleaseImage(&outputIplImageIntensity);
+      outputIplImageIntensity = cvCreateImage(cvSize(inputIplImage->width, inputIplImage->height), 8, 1);
+    }
+    
     didChange = YES;
   }
   return didChange;
@@ -94,6 +106,11 @@
       } else {
         
         [self ifDifferentUpdateInputIplImageWithInputImage: inputImage_];
+        
+        // Update image intensity if we're using it
+        if (useImageIntensity)
+          [QCCVPlugIn convertRGBA: inputIplImage toGRAY: inputIplImageIntensity];
+        
         [self ifDifferentUpdateOutputIplImageWithCloneOfInputImage: inputImage_];
         
         //NSLog(@" * %p %p", inputIplImage, outputIplImage);

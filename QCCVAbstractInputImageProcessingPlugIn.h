@@ -1,10 +1,3 @@
-//
-//  CVAbstractImageProcessingPlugIn.h
-//  VisualObjectTracker
-//
-//  Created by Mirek Rusin on 19/02/2010.
-//  Copyright 2010 Inteliv Ltd. All rights reserved.
-//
 
 #import "QCCVPlugIn.h"
 #import "QCCVIplImageProvider.h"
@@ -19,13 +12,19 @@
   id<QCPlugInOutputImageProvider> outputImage;
   IplImage *outputIplImage;
   QCCVIplImageProvider *outputIplImageProvider;
+  
+  // When YES automatically updates to and from image intensity
+  // TODO: add QCCV_INTENSITY_INPUT, QCCV_INTENSITY_OUTPUT
+  BOOL useImageIntensity;
+  IplImage *inputIplImageIntensity;
+  IplImage *outputIplImageIntensity;
 }
 
 @property (assign) id<QCPlugInInputImageSource> inputImage;
 @property (assign) id<QCPlugInOutputImageProvider> outputImage;
 
-- (QCCVAbstractInputImageProcessingPlugIn *) init;
-- (QCCVAbstractInputImageProcessingPlugIn *) initWithPixelFormat: (NSString *) pixelFormat_ lockBufferRepresentation: (BOOL) lockBufferRepresentation_;
+- (id) init;
+- (id) initWithPixelFormat: (NSString *) pixelFormat_ lockBufferRepresentation: (BOOL) lockBufferRepresentation_;
 
 - (BOOL) ifDifferentUpdateOutputIplImageWithCloneOfInputImage: (id<QCPlugInInputImageSource>) image;
 - (BOOL) ifDifferentUpdateInputIplImageWithInputImage: (id<QCPlugInInputImageSource>) image;

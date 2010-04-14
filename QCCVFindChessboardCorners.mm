@@ -1,27 +1,7 @@
-//
-//  QCCVFindChessboardCorners.m
-//  OpenCV
-//
-//  Created by Mirek Rusin on 05/04/2010.
-//  Copyright 2010 Inteliv Ltd. All rights reserved.
-//
 
 #import "QCCVFindChessboardCorners.h"
 
 @implementation QCCVFindChessboardCorners
-
-- (BOOL) ifDifferentUpdateInputIplImageWithInputImage: (id<QCPlugInInputImageSource>) image {
-  BOOL didChange = NO;
-  if (didChange = [super ifDifferentUpdateInputIplImageWithInputImage: image]) {
-    if (inputIplImageIntensity != NULL) {
-      cvReleaseImage(&inputIplImageIntensity);
-    }
-    inputIplImageIntensity = cvCreateImage(cvSize(inputIplImage->width, inputIplImage->height), 8, 1);
-  }
-  [QCCVPlugIn convertRGBA: inputIplImage toGRAY: inputIplImageIntensity];
-  //cvCvtColor(inputIplImage, inputIplImageIntensity, CV_RGBA2GRAY);
-  return didChange;
-}
 
 @end
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>OpenCV Erode Filter</string>
+	<key>description</key>
+	<string>Erode filter</string>
+	<key>copyright</key>
+	<string>(c) 2010 QuartzComposer.com, Mirek Rusin &lt;mirek@me.com&gt;, released under a BSD license, free for both academic and commercial use</string>
+	<key>attributes</key>
+	<dict>
+		<key>inputImage</key>
+		<dict>
+			<key>QCPortAttributeNameKey</key>
+			<string>Image</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>Input image</string>
+		</dict>
+		<key>inputFirstThreshold</key>
+		<dict>
+			<key>QCPortAttributeNameKey</key>
+			<string>First threshold</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>The first threshold</string>
+			<key>QCPortAttributeDefaultKey</key>
+			<real>30</real>
+		</dict>
+		<key>inputSecondThreshold</key>
+		<dict>
+			<key>QCPortAttributeNameKey</key>
+			<string>Second threshold</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>The second threshold</string>
+			<key>QCPortAttributeDefaultKey</key>
+			<real>50</real>
+		</dict>
+		<key>inputApertureSize</key>
+		<dict>
+			<key>QCPortAttributeNameKey</key>
+			<string>Aperture size</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>Aperture parameter for the Sobel operator</string>
+			<key>QCPortAttributeDefaultKey</key>
+			<integer>3</integer>
+		</dict>
+		<key>outputImage</key>
+		<dict>
+			<key>QCPortAttributeNameKey</key>
+			<string>Image</string>
+			<key>QCPortAttributeDescriptionKey</key>
+			<string>Output image</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
