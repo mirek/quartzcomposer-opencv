@@ -26,6 +26,7 @@
 		<string>QCCVDilate</string>
 		<string>QCCVErode</string>
 		<string>QCCVLaplace</string>
+		<string>QCCVFindChessboardCorners</string>
 	</array>
 </dict>
 </plist>

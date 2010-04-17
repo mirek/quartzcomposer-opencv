@@ -18,13 +18,7 @@
 }
 
 - (id) init {
-  return [self initWithPixelFormat: QCPlugInPixelFormatBGRA8 lockBufferRepresentation: YES];
-}
-
-- (id) initWithPixelFormat: (NSString *) pixelFormat_ lockBufferRepresentation: (BOOL) lockBufferRepresentation_ {
   if (self = [super init]) {
-    pixelFormat = pixelFormat_;
-    lockBufferRepresentation = lockBufferRepresentation_;
     outputIplImageProvider = [[QCCVIplImageProvider alloc] initWithIplImageReference: &outputIplImage];
   }
   return self;
@@ -90,18 +84,38 @@
 - (void) enableExecution: (id<QCPlugInContext>) context {
 }
 
-- (BOOL) execute: (id<QCPlugInContext>) context atTime: (NSTimeInterval) time withArguments: (NSDictionary*) arguments {
+- (BOOL) execute: (id<QCPlugInContext>) context atTime: (NSTimeInterval) time withArguments: (NSDictionary *) arguments {
   BOOL r = NO;
   if ([self didValueForInputKeyChange: @"inputImage"]) {
     id<QCPlugInInputImageSource> inputImage_ = self.inputImage;
     if (inputImage_ == nil) {
-      NSLog(@" * input image is null");
+      [context logMessage: @"Input image is nil"];
       r = YES;
     } else {
+      
+      NSString *pixelFormat;
+      CGColorSpaceRef colorSpace = [inputImage_ imageColorSpace];
+      if (CGColorSpaceGetModel(colorSpace) == kCGColorSpaceModelMonochrome) {
+        pixelFormat = QCPlugInPixelFormatI8;
+      } else if (CGColorSpaceGetModel(colorSpace) == kCGColorSpaceModelRGB) {
+#if __BIG_ENDIAN__
+        pixelFormat = QCPlugInPixelFormatARGB8;
+#else
+        pixelFormat = QCPlugInPixelFormatBGRA8;
+#endif
+      } else {
+        [context logMessage: @"Unable to get proper pixel format to lock buffer representation"];
+        return NO;
+      }
+      
       if (![inputImage_ lockBufferRepresentationWithPixelFormat: pixelFormat
                                                      colorSpace: [inputImage_ imageColorSpace]
                                                       forBounds: [inputImage_ imageBounds]]) {
-        NSLog(@" * cant lock buffer");
+        [context logMessage:
+         @"Can't lock buffer representation with pixel format %@, color space %@ and image bounds %@",
+         [inputImage_ bufferPixelFormat],
+         [inputImage_ imageColorSpace],
+         [inputImage_ imageBounds]];
         r = NO;
       } else {
         
@@ -118,7 +132,7 @@
         r = [self executeImageProcessingWith: context atTime: time withArguments: arguments];
         
         if (r == NO) {
-          NSLog(@"* returned NO");
+          [context logMessage: @"OpenCV patch says NO!", inputImage_];
         }
         
         [inputImage_ unlockBufferRepresentation];

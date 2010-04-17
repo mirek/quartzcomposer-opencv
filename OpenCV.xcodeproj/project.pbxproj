@@ -57,6 +57,11 @@
 		EB9948CB1175E567002CE96E /* libcxcore.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB99485F1175E523002CE96E /* libcxcore.dylib */; };
 		EB9948CC1175E567002CE96E /* libflann.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948601175E523002CE96E /* libflann.dylib */; };
 		EB9948CD1175E567002CE96E /* libml.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948651175E523002CE96E /* libml.dylib */; };
+		EB9949D711790AF9002CE96E /* QCCVSobel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9949D611790AF9002CE96E /* QCCVSobel.m */; };
+		EB9949F81179189D002CE96E /* OpenCV Find Chessboard Corners.qtz in Resources */ = {isa = PBXBuildFile; fileRef = EB9949F71179189D002CE96E /* OpenCV Find Chessboard Corners.qtz */; };
+		EB9949F9117918B7002CE96E /* OpenCV Find Chessboard Corners.qtz in Copy Compositions */ = {isa = PBXBuildFile; fileRef = EB9949F71179189D002CE96E /* OpenCV Find Chessboard Corners.qtz */; };
+		EB994AD011792450002CE96E /* QCCVFindChessboardCorners.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB994ACF11792450002CE96E /* QCCVFindChessboardCorners.xib */; };
+		EB994AD911792C08002CE96E /* QCCVFindChessboardCorners.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB994AD811792C08002CE96E /* QCCVFindChessboardCorners.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,7 @@
 				EB7E234D11721B9C007E5283 /* OpenCV Canny.qtz in Copy Compositions */,
 				EB7E23B511722898007E5283 /* OpenCV Dilate.qtz in Copy Compositions */,
 				EB7E242C117233C2007E5283 /* OpenCV Erode.qtz in Copy Compositions */,
+				EB9949F9117918B7002CE96E /* OpenCV Find Chessboard Corners.qtz in Copy Compositions */,
 				EB43EEF211736F4A00F0C3A2 /* OpenCV Laplace.qtz in Copy Compositions */,
 			);
 			name = "Copy Compositions";
@@ -146,6 +152,11 @@
 		EB9948651175E523002CE96E /* libml.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libml.dylib; path = lib/libml.dylib; sourceTree = "<group>"; };
 		EB9948661175E523002CE96E /* libopencv_lapack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_lapack.a; path = lib/libopencv_lapack.a; sourceTree = "<group>"; };
 		EB9948671175E523002CE96E /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = lib/libzlib.a; sourceTree = "<group>"; };
+		EB9949D511790AF9002CE96E /* QCCVSobel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCCVSobel.h; sourceTree = "<group>"; };
+		EB9949D611790AF9002CE96E /* QCCVSobel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCCVSobel.m; sourceTree = "<group>"; };
+		EB9949F71179189D002CE96E /* OpenCV Find Chessboard Corners.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = "OpenCV Find Chessboard Corners.qtz"; sourceTree = "<group>"; };
+		EB994ACF11792450002CE96E /* QCCVFindChessboardCorners.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QCCVFindChessboardCorners.xib; sourceTree = "<group>"; };
+		EB994AD811792C08002CE96E /* QCCVFindChessboardCorners.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QCCVFindChessboardCorners.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +220,7 @@
 				EB1D79AD116B31F50081E335 /* README */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				EB7E23E511722AE2007E5283 /* QCCVDilate.xib */,
+				EB994ACF11792450002CE96E /* QCCVFindChessboardCorners.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -227,6 +239,8 @@
 				EB7E24171172330B007E5283 /* QCCVErode.m */,
 				EB43EEEA11736E9800F0C3A2 /* QCCVLaplace.h */,
 				EB43EEEB11736E9800F0C3A2 /* QCCVLaplace.m */,
+				EB9949D511790AF9002CE96E /* QCCVSobel.h */,
+				EB9949D611790AF9002CE96E /* QCCVSobel.m */,
 				EB1D7907116A5F3E0081E335 /* QCCVFindChessboardCorners.h */,
 				EB1D7908116A5F3E0081E335 /* QCCVFindChessboardCorners.mm */,
 				EB0114B8116A543A002BC215 /* QCCVPlugIn.h */,
@@ -259,6 +273,7 @@
 				EB0114B3116A5425002BC215 /* QCCVCanny.plist */,
 				EB43EE7D1173528300F0C3A2 /* QCCVDilate.plist */,
 				EB43EE7E1173528300F0C3A2 /* QCCVErode.plist */,
+				EB994AD811792C08002CE96E /* QCCVFindChessboardCorners.plist */,
 				EB43EEF311736F5F00F0C3A2 /* QCCVLaplace.plist */,
 			);
 			name = "PlugIn Plists";
@@ -278,6 +293,7 @@
 		EB7E234B11721B9C007E5283 /* Compositions */ = {
 			isa = PBXGroup;
 			children = (
+				EB9949F71179189D002CE96E /* OpenCV Find Chessboard Corners.qtz */,
 				EB7E234C11721B9C007E5283 /* OpenCV Canny.qtz */,
 				EB7E23B411722898007E5283 /* OpenCV Dilate.qtz */,
 				EB7E242B117233C2007E5283 /* OpenCV Erode.qtz */,
@@ -346,6 +362,9 @@
 				EB43EE7F1173528300F0C3A2 /* QCCVDilate.plist in Resources */,
 				EB43EE801173528300F0C3A2 /* QCCVErode.plist in Resources */,
 				EB43EEF411736F5F00F0C3A2 /* QCCVLaplace.plist in Resources */,
+				EB9949F81179189D002CE96E /* OpenCV Find Chessboard Corners.qtz in Resources */,
+				EB994AD011792450002CE96E /* QCCVFindChessboardCorners.xib in Resources */,
+				EB994AD911792C08002CE96E /* QCCVFindChessboardCorners.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +401,7 @@
 				EB7E23E311722A21007E5283 /* QCCVConvKernel.m in Sources */,
 				EB7E24181172330B007E5283 /* QCCVErode.m in Sources */,
 				EB43EEEC11736E9800F0C3A2 /* QCCVLaplace.m in Sources */,
+				EB9949D711790AF9002CE96E /* QCCVSobel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

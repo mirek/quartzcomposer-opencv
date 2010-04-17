@@ -3,7 +3,7 @@
 
 #import "QCCVAbstractInputImageProcessingPlugIn.h"
 
-@interface QCCVLaplace : QCCVAbstractInputImageProcessingPlugIn {
+@interface QCCVSobel : QCCVAbstractInputImageProcessingPlugIn {
   NSUInteger inputApertureSizeIndex;
   IplImage *outputIplImage32F;
 }

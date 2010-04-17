@@ -7,7 +7,7 @@
 	<key>description</key>
 	<string>Calculate the Laplacian of an image</string>
 	<key>copyright</key>
-	<string>(c) 2010 QuartzComposer.com, Mirek Rusin &lt;mirek@me.com&gt;, released under a BSD license, free for both academic and commercial use</string>
+	<string>Ported OpenCV library (http://opencv.willowgarage.com) to Quartz Composer by Mirek Rusin &lt;mirek@me.com&gt; http://quartzcomposer.com, released under the same license as OpenCV library - BSD license, free for both academic and commercial use.</string>
 	<key>attributes</key>
 	<dict>
 		<key>inputImage</key>

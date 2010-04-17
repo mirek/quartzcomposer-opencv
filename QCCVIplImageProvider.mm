@@ -22,18 +22,34 @@
 }
 
 - (CGColorSpaceRef) imageColorSpace {
-  return ((*iplImageReference)->nChannels == 1 ? CGColorSpaceCreateWithName(kCGColorSpaceGenericGray) : CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB));
+  CGColorSpaceRef colorSpace = nil;
+  switch ((*iplImageReference)->nChannels) {
+    case 1: colorSpace = CGColorSpaceCreateWithName(kCGColorSpaceGenericGray); break;
+    case 4: colorSpace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB); break;\
+  }
+  NSLog(@"* Color space %@", colorSpace);
+  return colorSpace;
 }
 
-// TODO: return proper stuff
+// TODO: cache
 - (NSArray *) supportedBufferPixelFormats {
-  return [NSArray arrayWithObjects:
-          QCPlugInPixelFormatARGB8,
-          QCPlugInPixelFormatBGRA8,
-          QCPlugInPixelFormatRGBAf,
-          QCPlugInPixelFormatI8,
-          QCPlugInPixelFormatIf,
-          nil];
+  switch ((*iplImageReference)->nChannels) {
+    case 1:
+      switch ((*iplImageReference)->depth) {
+        case IPL_DEPTH_32F: return [NSArray arrayWithObjects: QCPlugInPixelFormatIf, nil];
+        case IPL_DEPTH_8U:  return [NSArray arrayWithObjects: QCPlugInPixelFormatI8, nil];
+        default: return nil;
+      }
+    
+    case 4:
+      switch ((*iplImageReference)->depth) {
+        case IPL_DEPTH_32F: return [NSArray arrayWithObjects: QCPlugInPixelFormatRGBAf, nil];
+        case IPL_DEPTH_8U:  return [NSArray arrayWithObjects: QCPlugInPixelFormatBGRA8, nil];
+        default: return nil;
+      }
+      
+    default: return nil;
+  }
 }
 
 - (BOOL) renderToBuffer: (void *) baseAddress

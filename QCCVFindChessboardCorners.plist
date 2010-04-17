@@ -3,9 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>OpenCV Dilate Filter</string>
+	<string>OpenCV Find Chessboard Corners</string>
 	<key>description</key>
-	<string>Dilate filter</string>
+	<string>Finds the positions of the internal corners of the chessboard.
+  
+The patch attempts to determine whether the input image is a view of the chessboard pattern and locate the internal chessboard corners.
+
+Outputs a point structure or an image (or both) if all of the corners have been found and they have been placed in a certain order (row by row, left to right in every row), otherwise, if it fails to find all the corners or reorder them, it outputs empty structure and/or empty image.
+For example, a regular chessboard has 8 x 8 squares and 7 x 7 internal corners, that is, points, where the black squares touch each other.
+The coordinates detected are approximate, and to determine their position more accurately you may want to use OpenCV Find Corner Sub-pixels.
+
+The patch requires some white space (like a square-thick border, the wider the better) around the board to make the detection more robust in various environment (otherwise if there is no border and the background is dark, the outer black squares can not be segmented properly and the square grouping and ordering algorithm will fail.</string>
 	<key>copyright</key>
 	<string>Ported OpenCV library (http://opencv.willowgarage.com) to Quartz Composer by Mirek Rusin &lt;mirek@me.com&gt; http://quartzcomposer.com, released under the same license as OpenCV library - BSD license, free for both academic and commercial use.</string>
 	<key>attributes</key>

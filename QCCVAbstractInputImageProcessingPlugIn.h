@@ -3,9 +3,6 @@
 #import "QCCVIplImageProvider.h"
 
 @interface QCCVAbstractInputImageProcessingPlugIn : QCCVPlugIn {
-  NSString *pixelFormat;
-  BOOL lockBufferRepresentation;
-  
   id<QCPlugInInputImageSource> inputImage;
   IplImage *inputIplImage;
   
@@ -24,7 +21,6 @@
 @property (assign) id<QCPlugInOutputImageProvider> outputImage;
 
 - (id) init;
-- (id) initWithPixelFormat: (NSString *) pixelFormat_ lockBufferRepresentation: (BOOL) lockBufferRepresentation_;
 
 - (BOOL) ifDifferentUpdateOutputIplImageWithCloneOfInputImage: (id<QCPlugInInputImageSource>) image;
 - (BOOL) ifDifferentUpdateInputIplImageWithInputImage: (id<QCPlugInInputImageSource>) image;
