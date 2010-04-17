@@ -1,17 +1,14 @@
-OpenCV Quartz Composer PlugIn
-=============================
+h1. OpenCV Quartz Composer PlugIn
 
 OpenCV 2.1 Quartz Composer PlugIn
 
-Installation
-------------
+h2. Installation
 
     git clone git@github.com:mirek/quartzcomposer-opencv.git
     open quartzcomposer-opencv/OpenCV.xcodeproj
     Build & Copy will start Quartz Composer with one of example compositions
 
-License
--------
+h2. License
 
 Same as OpenCV http://opencv.willowgarage.com/wiki
 BSD License http://creativecommons.org/licenses/BSD
