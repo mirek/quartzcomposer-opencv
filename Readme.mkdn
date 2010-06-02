@@ -19,13 +19,29 @@ BSD License http://creativecommons.org/licenses/BSD
 
 ### Dilate
 
-| Settings | Example |
-|^. !http://quartzcomposer.com/images/plugins/opencv/blank-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-dilate-example.png! |
+<table>
+  <tr>
+    <th>Settings</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>[Blank settings](http://quartzcomposer.com/images/plugins/opencv/blank-settings.png)</td>
+    <td>[Dilate](http://quartzcomposer.com/images/plugins/opencv/opencv-dilate-example.png)</td>
+  </tr>
+</table>
 
 ### Erode
 
-| Settings | Example |
-|^. !http://quartzcomposer.com/images/plugins/opencv/blank-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-erode-example.png! |
+<table>
+  <tr>
+    <th>Settings</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>[Blank settings](http://quartzcomposer.com/images/plugins/opencv/blank-settings.png)</td>
+    <td>[Erode](http://quartzcomposer.com/images/plugins/opencv/opencv-erode-example.png)</td>
+  </tr>
+</table>
 
 ### Laplace
 
@@ -35,12 +51,28 @@ BSD License http://creativecommons.org/licenses/BSD
 
 ### Canny
 
-| Settings | Example |
-|^. !http://quartzcomposer.com/images/plugins/opencv/blank-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-canny-example.png! |
+<table>
+  <tr>
+    <th>Settings</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>[Blank settings](http://quartzcomposer.com/images/plugins/opencv/blank-settings.png)</td>
+    <td>[Canny](http://quartzcomposer.com/images/plugins/opencv/opencv-canny-example.png)</td>
+  </tr>
+</table>
 
 ## Camera Calibration and 3D Reconstruction
 
 ### Find Chessboard Corners
 
-| Settings | Example |
-|^. !http://quartzcomposer.com/images/plugins/opencv/opencv-find-chessboard-corners-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-find-chessboard-corners-example.png! |
+<table>
+  <tr>
+    <th>Settings</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>[Find chessboard corners settings](http://quartzcomposer.com/images/plugins/opencv/opencv-find-chessboard-corners-settings.png)</td>
+    <td>[Find chessboard corners](http://quartzcomposer.com/images/plugins/opencv/opencv-find-chessboard-corners-example.png)</td>
+  </tr>
+</table>
