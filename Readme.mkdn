@@ -58,9 +58,9 @@ BSD License http://creativecommons.org/licenses/BSD
   </tr>
   <tr>
     <td>
-      [Blank settings](http://quartzcomposer.com/images/plugins/opencv/blank-settings.png)
+      ![Blank settings](http://quartzcomposer.com/images/plugins/opencv/blank-settings.png)
     </td>
-    <td>[Canny](http://quartzcomposer.com/images/plugins/opencv/opencv-canny-example.png)</td>
+    <td>![Canny](http://quartzcomposer.com/images/plugins/opencv/opencv-canny-example.png)</td>
   </tr>
 </table>
 
