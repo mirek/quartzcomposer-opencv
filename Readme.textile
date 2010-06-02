@@ -1,0 +1,50 @@
+h1. OpenCV 2.1 for Quartz Composer
+
+OpenCV 2.1 Quartz Composer PlugIn
+
+h2. Installation
+
+    git clone git@github.com:mirek/quartzcomposer-opencv.git
+    open quartzcomposer-opencv/OpenCV.xcodeproj
+    # Build and Copy will start Quartz Composer with one of example compositions
+
+h2. License
+
+Same as OpenCV http://opencv.willowgarage.com/wiki
+BSD License http://creativecommons.org/licenses/BSD
+
+h1. Currently implemented patches
+
+h2. Quick Start
+
+Go to Downloads tab and grab the most recent version. Put it in @~/Library/Graphics/Quartz Composer Plug-Ins@ and look for "OpenCV..." patches.
+
+h2. Image Filtering
+
+h3. Dilate
+
+| Settings | Example |
+|^. !http://quartzcomposer.com/images/plugins/opencv/blank-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-dilate-example.png! |
+
+h3. Erode
+
+| Settings | Example |
+|^. !http://quartzcomposer.com/images/plugins/opencv/blank-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-erode-example.png! |
+
+h3. Laplace
+
+h3. Sobel
+
+h2. Feature Detection
+
+h3. Canny
+
+| Settings | Example |
+|^. !http://quartzcomposer.com/images/plugins/opencv/blank-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-canny-example.png! |
+
+h2. Camera Calibration and 3D Reconstruction
+
+h3. Find Chessboard Corners
+
+| Settings | Example |
+|^. !http://quartzcomposer.com/images/plugins/opencv/opencv-find-chessboard-corners-settings.png! |^. !http://quartzcomposer.com/images/plugins/opencv/opencv-find-chessboard-corners-example.png! |
