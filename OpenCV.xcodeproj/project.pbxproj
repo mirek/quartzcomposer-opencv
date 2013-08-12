@@ -43,20 +43,6 @@
 		EB7E23E611722AE2007E5283 /* QCCVDilate.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7E23E511722AE2007E5283 /* QCCVDilate.xib */; };
 		EB7E24181172330B007E5283 /* QCCVErode.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7E24171172330B007E5283 /* QCCVErode.m */; };
 		EB7E242C117233C2007E5283 /* OpenCV Erode.qtz in Copy Compositions */ = {isa = PBXBuildFile; fileRef = EB7E242B117233C2007E5283 /* OpenCV Erode.qtz */; };
-		EB9948681175E523002CE96E /* libcv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99485E1175E523002CE96E /* libcv.dylib */; };
-		EB9948691175E523002CE96E /* libcxcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99485F1175E523002CE96E /* libcxcore.dylib */; };
-		EB99486A1175E523002CE96E /* libflann.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948601175E523002CE96E /* libflann.dylib */; };
-		EB99486B1175E523002CE96E /* liblibjasper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948611175E523002CE96E /* liblibjasper.a */; };
-		EB99486C1175E523002CE96E /* liblibjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948621175E523002CE96E /* liblibjpeg.a */; };
-		EB99486D1175E523002CE96E /* liblibpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948631175E523002CE96E /* liblibpng.a */; };
-		EB99486E1175E523002CE96E /* liblibtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948641175E523002CE96E /* liblibtiff.a */; };
-		EB99486F1175E523002CE96E /* libml.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948651175E523002CE96E /* libml.dylib */; };
-		EB9948701175E523002CE96E /* libopencv_lapack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948661175E523002CE96E /* libopencv_lapack.a */; };
-		EB9948711175E523002CE96E /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948671175E523002CE96E /* libzlib.a */; };
-		EB9948CA1175E567002CE96E /* libcv.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB99485E1175E523002CE96E /* libcv.dylib */; };
-		EB9948CB1175E567002CE96E /* libcxcore.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB99485F1175E523002CE96E /* libcxcore.dylib */; };
-		EB9948CC1175E567002CE96E /* libflann.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948601175E523002CE96E /* libflann.dylib */; };
-		EB9948CD1175E567002CE96E /* libml.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB9948651175E523002CE96E /* libml.dylib */; };
 		EB9949D711790AF9002CE96E /* QCCVSobel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9949D611790AF9002CE96E /* QCCVSobel.m */; };
 		EB9949F81179189D002CE96E /* OpenCV Find Chessboard Corners.qtz in Resources */ = {isa = PBXBuildFile; fileRef = EB9949F71179189D002CE96E /* OpenCV Find Chessboard Corners.qtz */; };
 		EB9949F9117918B7002CE96E /* OpenCV Find Chessboard Corners.qtz in Copy Compositions */ = {isa = PBXBuildFile; fileRef = EB9949F71179189D002CE96E /* OpenCV Find Chessboard Corners.qtz */; };
@@ -81,10 +67,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				EB9948CA1175E567002CE96E /* libcv.dylib in Copy Frameworks */,
-				EB9948CB1175E567002CE96E /* libcxcore.dylib in Copy Frameworks */,
-				EB9948CC1175E567002CE96E /* libflann.dylib in Copy Frameworks */,
-				EB9948CD1175E567002CE96E /* libml.dylib in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,16 +124,6 @@
 		EB7E24161172330B007E5283 /* QCCVErode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCCVErode.h; sourceTree = "<group>"; };
 		EB7E24171172330B007E5283 /* QCCVErode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCCVErode.m; sourceTree = "<group>"; };
 		EB7E242B117233C2007E5283 /* OpenCV Erode.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = "OpenCV Erode.qtz"; sourceTree = "<group>"; };
-		EB99485E1175E523002CE96E /* libcv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcv.dylib; path = lib/libcv.dylib; sourceTree = "<group>"; };
-		EB99485F1175E523002CE96E /* libcxcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcxcore.dylib; path = lib/libcxcore.dylib; sourceTree = "<group>"; };
-		EB9948601175E523002CE96E /* libflann.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libflann.dylib; path = lib/libflann.dylib; sourceTree = "<group>"; };
-		EB9948611175E523002CE96E /* liblibjasper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjasper.a; path = lib/liblibjasper.a; sourceTree = "<group>"; };
-		EB9948621175E523002CE96E /* liblibjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjpeg.a; path = lib/liblibjpeg.a; sourceTree = "<group>"; };
-		EB9948631175E523002CE96E /* liblibpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibpng.a; path = lib/liblibpng.a; sourceTree = "<group>"; };
-		EB9948641175E523002CE96E /* liblibtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibtiff.a; path = lib/liblibtiff.a; sourceTree = "<group>"; };
-		EB9948651175E523002CE96E /* libml.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libml.dylib; path = lib/libml.dylib; sourceTree = "<group>"; };
-		EB9948661175E523002CE96E /* libopencv_lapack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_lapack.a; path = lib/libopencv_lapack.a; sourceTree = "<group>"; };
-		EB9948671175E523002CE96E /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = lib/libzlib.a; sourceTree = "<group>"; };
 		EB9949D511790AF9002CE96E /* QCCVSobel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCCVSobel.h; sourceTree = "<group>"; };
 		EB9949D611790AF9002CE96E /* QCCVSobel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCCVSobel.m; sourceTree = "<group>"; };
 		EB9949F71179189D002CE96E /* OpenCV Find Chessboard Corners.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = "OpenCV Find Chessboard Corners.qtz"; sourceTree = "<group>"; };
@@ -166,16 +138,6 @@
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				16BA96310A7EB9AC001E4983 /* Quartz.framework in Frameworks */,
-				EB9948681175E523002CE96E /* libcv.dylib in Frameworks */,
-				EB9948691175E523002CE96E /* libcxcore.dylib in Frameworks */,
-				EB99486A1175E523002CE96E /* libflann.dylib in Frameworks */,
-				EB99486B1175E523002CE96E /* liblibjasper.a in Frameworks */,
-				EB99486C1175E523002CE96E /* liblibjpeg.a in Frameworks */,
-				EB99486D1175E523002CE96E /* liblibpng.a in Frameworks */,
-				EB99486E1175E523002CE96E /* liblibtiff.a in Frameworks */,
-				EB99486F1175E523002CE96E /* libml.dylib in Frameworks */,
-				EB9948701175E523002CE96E /* libopencv_lapack.a in Frameworks */,
-				EB9948711175E523002CE96E /* libzlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,16 +162,6 @@
 			children = (
 				16BA96300A7EB9AC001E4983 /* Quartz.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
-				EB99485E1175E523002CE96E /* libcv.dylib */,
-				EB99485F1175E523002CE96E /* libcxcore.dylib */,
-				EB9948601175E523002CE96E /* libflann.dylib */,
-				EB9948611175E523002CE96E /* liblibjasper.a */,
-				EB9948621175E523002CE96E /* liblibjpeg.a */,
-				EB9948631175E523002CE96E /* liblibpng.a */,
-				EB9948641175E523002CE96E /* liblibtiff.a */,
-				EB9948651175E523002CE96E /* libml.dylib */,
-				EB9948661175E523002CE96E /* libopencv_lapack.a */,
-				EB9948671175E523002CE96E /* libzlib.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,7 +293,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "OpenCV" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* Quartz Composer Plug In */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -428,15 +384,22 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OpenCV_Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/opt/local/lib,
-					"\"$(SRCROOT)/lib\"",
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_contrib",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_gpu",
+					"-lopencv_imgproc",
 				);
 				PRODUCT_NAME = OpenCV;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = YES;
 			};
@@ -451,15 +414,22 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OpenCV_Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/opt/local/lib,
-					"\"$(SRCROOT)/lib\"",
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_contrib",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_gpu",
+					"-lopencv_imgproc",
 				);
 				PRODUCT_NAME = OpenCV;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;

@@ -1,6 +1,4 @@
 .DS_Store
 build
-OpenCV.xcodeproj/*.pbxuser
-OpenCV.xcodeproj/*.mode1v3
-!OpenCV.xcodeproj/default.pbxuser
+xcuserdata
 doxygen
